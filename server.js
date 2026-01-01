@@ -29,6 +29,10 @@ app.use("/api/comments", commentRoutes);
 // Error handler (always last)
 app.use(errorHandler);
 
+app.get('/', (req, res) => {
+  res.send('Blog API running 🚀');
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () =>
   console.log(`🚀 Server running on http://localhost:${PORT}`)
